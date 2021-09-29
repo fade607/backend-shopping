@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/dev/ref/settings/
 """
 import django_heroku
-
+import os
 
 from pathlib import Path
 
@@ -97,6 +97,7 @@ MIDDLEWARE = [
 
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -173,9 +174,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = 'static/'
 MEDIA_URL='/images/'
 
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'static/images')
+]
 
 STATICFILES_DIRS =[BASE_DIR/ 'static']
 MEDIA_ROOT = 'static/images'
