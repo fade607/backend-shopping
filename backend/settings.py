@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     "corsheaders",
-     'rest_framework.authtoken',
+    'django_filters',
+    'rest_framework.authtoken',
     'base.apps.BaseConfig'
 ]
 REST_FRAMEWORK = {
@@ -197,3 +198,4 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
    
 ]
+
