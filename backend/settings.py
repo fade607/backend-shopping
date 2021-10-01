@@ -175,7 +175,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_URL='/images/'
 
@@ -199,4 +198,3 @@ CORS_ALLOWED_ORIGINS = [
 ]
 django_heroku.settings(locals())
 
-django_heroku.settings(locals())
