@@ -178,7 +178,7 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_URL='/images/'
-    
+
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static/images')
@@ -198,4 +198,5 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
    
 ]
+django_heroku.settings(locals())
 
