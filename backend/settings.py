@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     "corsheaders",
-     'rest_framework.authtoken',
+    'django_filters',
+    'rest_framework.authtoken',
     'base.apps.BaseConfig'
 ]
 REST_FRAMEWORK = {
@@ -96,7 +97,7 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
 
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+     'whitenoise.middleware.WhiteNoiseMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -175,9 +176,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 MEDIA_URL='/images/'
-
+    
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static/images')
@@ -197,3 +198,4 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
    
 ]
+
